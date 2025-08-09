@@ -1,21 +1,19 @@
 #include <stdio.h>
 unsigned int flippingBits(unsigned int n) 
 {
-    return ~n & 0xFFFFFFFF;
+    return (~n) & 0xFFFFFFFF;
 }
 
 int main() 
 {
-    int q; 
-    scanf("%d", &q); 
-
-    while (q--) 
+    int t;
+    scanf("%d", &t);
+    while (t > 0) 
     {
-        unsigned int n;
-        scanf("%u", &n); 
-        unsigned int result = flippingBits(n);
-        printf("%u\n", result);
+        unsigned int num;
+        scanf("%u", &num);
+        printf("%u\n", flippingBits(num));
+        t--;
     }
-
     return 0;
 }
